@@ -1,7 +1,7 @@
 package com.company;
 import java.util.Scanner;
 public class Main {
-    /**
+    /*
     * @author Carmen Garcia
     * */
     public static void main(String[] args) {
@@ -69,6 +69,9 @@ public class Main {
              * */
             return primos;
         } else { // max < 2
+            /*
+            * @return new int[0] si el maximo es menor que 2
+            * */
             return new int[0];
             // Vector vacío
         }
