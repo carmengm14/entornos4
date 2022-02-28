@@ -1,10 +1,15 @@
 package com.company;
 import java.util.Scanner;
 public class Main {
+    /*
+    * @author Carmen Garcia
+    * */
     public static void main(String[] args) {
         Scanner lector = new Scanner(System.in);
         System.out.print("Introduce el número para la criba de Erastótenes: ");
-
+        /*
+        * @param arrayDatos es un vector que almacena los datos escritos por el usuario
+        * */
         int datos = lector.nextInt();
         int[] arrayDatos = new int[datos];
         System.out.println("\nNumero inicial hasta :" + datos);
@@ -20,6 +25,9 @@ public class Main {
         }
     }
 
+    /*
+     * @param max parametro del metodo generarPrimos que crea números primos de 1 a max
+    * */
     public static int[] generarPrimos (int max)
     {
         int i,j;
@@ -40,21 +48,32 @@ public class Main {
                         esPrimo[j] = false;
                 }
             }
-
+            /*
+             * @param contador cuenta cuántos numeros primos hay
+             * */
             int contador = 0;
             for (i = 0; i < tamanyo; i++) {
                 if (esPrimo[i])
                     contador++;
             }
-
+            /*
+             * @param primos un array que rellena el vector de números primos
+             * */
             int [] primos = new int[contador];
             for (i = 0, j = 0; i < tamanyo; i++) {
                 if (esPrimo[i])
                     primos[j++] = i;
             }
+            /*
+             * @return primos esta clase devuelve los numeros que han salido como primos
+             * */
             return primos;
         } else { // max < 2
+            /*
+            * @return new int[0] si el maximo es menor que 2
+            * */
             return new int[0];
+            // Vector vacío
         }
     }
 }
